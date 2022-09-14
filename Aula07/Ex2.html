@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digite Nota</title>
+</head>
+<body>
+    <h1>Digite Nota</h1>
+    
+    <script>
+        var nota = ""
+        do {
+            nota = Number(prompt("Digite uma nota de 0 a 10:"))
+        } while ((nota > 10 || nota < 0) || isNaN(nota));
+        document.writeln(`<p>${nota}</p>`)
+    </script>
+</body>
+</html>
