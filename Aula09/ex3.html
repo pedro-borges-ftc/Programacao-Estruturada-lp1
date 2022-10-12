@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de horas</title>
+
+    <style>
+        input{
+            width: 2rem;
+        }
+        section{
+            text-align: center;
+            border: solid 1px;
+            background-color: rgb(255, 238, 0);
+            padding: 10px;
+            width: 250px;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>   
+
+    <section>
+        <h1>Conversor de horas</h1>
+         <input type="text" id="txthora" maxlength="2">
+    :
+    <input type="text" id="txtminuto" maxlength="2">
+    <br>
+    <br>
+    <button onclick="converterHora()">Converter</button>
+
+    <div id="divresultado">
+        <p>RESULTADO</p>
+        <p>RESULTADO</p>
+    </div>
+    </section>
+   
+
+
+    <script>
+        function exibeResultado(resposta) {
+            var resultado = document.getElementById("divresultado")
+            resultado.innerHTML = "<p>" + resposta + "</p>"
+        }
+
+        function converterHora() {
+            var hora = Number(document.getElementById("txthora").value)
+            var minuto = Number(document.getElementById("txtminuto").value)
+
+            if (validaFormulario(hora,minuto) == true) {
+
+                if (hora >= 0 && hora < 12) {
+                    //AM
+                    exibeResultado(`${hora}:${minuto} AM`)
+                } else {
+                    //PM
+                    if (hora > 12) {
+                        exibeResultado(`${hora - 12}:${minuto} PM`)
+                    } else {
+                        exibeResultado(`${hora}:${minuto} PM`)
+                    }
+                }
+            }
+        }
+
+        function validaFormulario(hora, minuto){
+            if(hora > 23 || hora < 0){
+                alert("Hora inválida")
+                return false
+            }
+
+            if(minuto > 59 || minuto < 0){
+                alert("Minuto inválido")
+                return false
+            }
+
+            return true
+        }
+    </script>
+</body>
+
+</html>
