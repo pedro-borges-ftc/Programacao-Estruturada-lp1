@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de horas</title>
+
+    <style>
+        input {
+            width: 5rem;
+            text-align: center;
+        }
+
+        section {
+            text-align: center;
+            border: solid 1px;
+            background-color: rgb(255, 145, 0);
+            padding: 10px;
+            width: 250px;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <h1>Série Fibonacci</h1>
+        <p>A sequência de Fibonacci é uma sucessão de números da seguinte forma:</p>
+
+        <div>
+            <img width="250" height="26" src="https://algol.dev/wp-content/uploads/2020/10/recursion_01.png" alt="">
+        </div>
+
+        <p>A natureza recursiva da sequência de Fibonacci está no fato de que o n-ésimo termo da sequência é encontrado
+            da seguinte maneira:</p>
+
+        <p> <strong>fib(n) = fib(n-1) + fib(n-2)</strong> </p>
+
+        <p> Digite o n-ésimo termo a ser encontrado </p>
+        <input type="text" id="txttermo" maxlength="3" onblur="validaCampo()">
+        <br><br>
+        <button onclick="calcularFibonacci()">Converter</button>
+
+        <div id="divresultado">
+            <p>RESULTADO</p>
+        </div>
+    </section>
+
+    <script>
+        function calcularFibonacci() {
+            var termo = Number(document.getElementById("txttermo").value)
+            
+            if (validaCampo(termo) == true) {
+                exibeResultado(`O ${termo}º termo da série de Fibonacci é :${fibonacci(termo)}`)
+            }
+        }
+        function validaCampo(termo) {
+            if (termo < 0) {
+                alert("termo inválido")
+                return false
+            }
+            return true
+        }
+        function fibonacci(n){
+            if(n == 1 || n == 2){
+                return 1
+            }else{
+                return fibonacci(n-1) + fibonacci(n-2)
+            }
+        }
+        function exibeResultado(resposta) {
+            var resultado = document.getElementById("divresultado")
+            resultado.innerHTML = "<p>" + resposta + "</p>"
+        }
+    </script>
+</body>
+
+</html>
