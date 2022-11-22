@@ -1,11 +1,13 @@
 //var input = require('fs').readFileSync('/dev/stdin', 'utf8');
 //var lines = input.split('\n');
 
-var linha = '1 0 0 1 0'//lines.shift()
+var linha = '1 1 0 1 0'//lines.shift()
+console.log(linha)
 var conector1 = linha.split(' ')
 console.log(conector1)
 
-var linha = '1 0 1 1 0'//lines.shift()
+var linha = '0 0 1 0 1'//lines.shift()
+console.log(linha)
 var conector2 = linha.split(' ')
 console.log(conector2)
 
