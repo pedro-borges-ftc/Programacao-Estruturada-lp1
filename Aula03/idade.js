@@ -19,7 +19,7 @@ prompt.start();
 prompt.get(['AnoNascimento'], function (err, result) {
     //
     const dataAtual = new Date();
-    const anoAtual = dataAtual. getFullYear();
+    const anoAtual = dataAtual.getFullYear();
     
     //Leitura dos dados
     var AnoNascimento = result.AnoNascimento
