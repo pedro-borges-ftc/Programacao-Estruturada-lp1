@@ -1,5 +1,5 @@
  //entrada de dados
- var celsius = Number(window.prompt("Digite um valor ºC a ser convertido:"))
+ var celsius = Number(window.prompt("Digite um valor ºC a ser convertido para Farenheit:"))
 
  //processamento dos dados
  var farenheit = 32 + (celsius * 9 / 5)
