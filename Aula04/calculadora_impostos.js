@@ -1,4 +1,11 @@
-//Tema 08 - Aula 04
+/*
+Criar uma página para calcular imposto de produtos importados.
+
+Neste caso, será solicitado que o usuário digite o preço do produto. 
+Considere que a taxa é de 60%.
+
+Vamos efetuar o cálculo do imposto e depois exibir o valor do imposto e o valor do produto acrescido do valor do imposto. 
+*/
 function calculadoraImpostos(){
     //leitura dos dados do HTML
     var txtproduto = window.document.getElementById("txtproduto")

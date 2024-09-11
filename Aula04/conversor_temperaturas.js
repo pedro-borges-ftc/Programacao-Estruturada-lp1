@@ -1,3 +1,7 @@
+ /*
+Criar algoritmo que peça ao usuário uma temperatura em Celsius e converta essa temperatura para Fahrenheit.
+Imprima o valor da temperatura em Fahrenheit
+*/
  //entrada de dados
  var celsius = Number(window.prompt("Digite um valor ºC a ser convertido para Farenheit:"))
 

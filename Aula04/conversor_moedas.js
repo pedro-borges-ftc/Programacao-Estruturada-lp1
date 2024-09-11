@@ -1,3 +1,7 @@
+ /*
+Criar algoritmo que peça ao usuário um valor em reais e converta esse valor para dólar.
+Imprima o valor em dólares na tela, considerando $1 = R$ 5,30.
+*/
  //entrada de dados
  var valor_real = Number(window.prompt("Digite um valor (R$) a ser convertido para dólar:"))
 
