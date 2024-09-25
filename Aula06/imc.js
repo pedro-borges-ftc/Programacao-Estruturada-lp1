@@ -1,5 +1,5 @@
 //Entrada de dados
-var peso = 65      //em kg
+var peso = 68       //em kg
 var altura = 1.65   //em m
 
 //Processamento
