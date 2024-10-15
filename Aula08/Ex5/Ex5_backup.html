@@ -1,0 +1,100 @@
+Ex3<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Lanchonete</h1>
+    <h4>Cardápio</h4>
+    <table border="1">
+        <tr>
+            <td>Código</td>
+            <td>Produto</td>
+            <td>Preço</td>
+        </tr>
+        <tr>
+            <td>100</td>
+            <td>HotDog</td>
+            <td>R$ 1,20</td>
+        </tr>
+        <tr>
+            <td>101</td>
+            <td>Baurú Simples</td>
+            <td>R$ 1,30</td>
+        </tr>
+        <tr>
+            <td>102</td>
+            <td>Baurú com ovo</td>
+            <td>R$ 1,50</td>
+        </tr>
+        <tr>
+            <td>103</td>
+            <td>Hambúrguer</td>
+            <td>R$ 1,20</td>
+        </tr>
+        <tr>
+            <td>104</td>
+            <td>Cheeseburguer</td>
+            <td>R$ 1,30</td>
+        </tr>
+        <tr>
+            <td>105</td>
+            <td>Refrigerante</td>
+            <td>R$ 1,00</td>
+        </tr>
+    </table>
+    <p>Segue abaixo o seu pedido:</p>
+    <script>
+        var codigo
+        var quantidade
+        var resultado = ""
+        var totalItem = 0
+        var totalPedido = 0
+        do {
+            codigo = Number(prompt('Digite o código do produto desejado:'))
+            totalItem = 0
+
+            if(codigo >= 100 && codigo <= 105){
+                quantidade = Number(prompt('Digite a quantidade de itens:'))
+            }
+
+            switch (codigo) {
+                case 100://Cachorro Quente R$ 1,20
+                    totalItem = quantidade * 1.2
+                    resultado += `<p>${codigo} - Cachorro quente - ${quantidade} - R$ 1,20 = ${totalItem.toFixed(2)}</p>`
+                    break;
+                case 101://Baurú Simples R$ 1,30
+                    totalItem = quantidade * 1.3
+                    resultado += `<p>${codigo} - Baurú Simples - ${quantidade} - R$ 1,30 = ${totalItem.toFixed(2)}</p>`
+                    break;
+                case 102://Bauru com ovo R$ 1,50
+                    totalItem = quantidade * 1.5
+                    resultado += `<p>${codigo} - Bauru com ovo - ${quantidade} - R$ 1,50 = ${totalItem.toFixed(2)}</p>`
+                    break;
+                case 103://Hambúrguer R$ 1,20
+                    totalItem = quantidade * 1.2
+                    resultado += `<p>${codigo} - Hambúrguer - ${quantidade} - R$ 1,20 = ${totalItem.toFixed(2)}</p>`
+                    break;
+                case 104://Cheeseburguer R$ 1,30
+                    totalItem = quantidade * 1.3
+                    resultado += `<p>${codigo} - Cheeseburguer  - ${quantidade} - R$ 1,30 = ${totalItem.toFixed(2)}</p>`
+                    break;
+                case 105://Refrigerante  R$ 1,00
+                    totalItem = quantidade * 1.0
+                    resultado += `<p>${codigo} - Refrigerante  - ${quantidade} - R$ 1,00 = ${totalItem.toFixed(2)}</p>`
+                    break;
+                default:
+                    break;
+            }
+            totalPedido += totalItem
+        } while (codigo != 999);
+        resultado += `Total do Pedido ==> R$ ${totalPedido.toFixed(2)}`
+       document.writeln(resultado)
+    </script>
+</body>
+</html>
