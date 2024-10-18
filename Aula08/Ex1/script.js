@@ -12,7 +12,7 @@ function CalcularIdade(){
         idade--;
     }
 
-    resultado = `<p> A idade é ${idade} <\p>`
+    resultado = `<p>A idade é ${idade}<\p>`
 
     if (idade < 18){
         resultado += `<p>O usuário é menor de idade.<\p>`
