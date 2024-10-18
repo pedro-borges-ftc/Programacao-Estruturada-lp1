@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor Temperaturas</title>
+</head>
+
+<body>
+    <h1>Conversor Temperaturas</h1>
+    
+    <script>
+        function entradaDeDados(texto){
+            return prompt(texto)
+        }
+        function celsiusParaFarenheit(c){
+            return (c * 1.8) + 32
+        }
+        function farenheitParaCelsius(f){
+            return (f-32) / 1.8
+        }
+
+        var resultado = "<p>"
+        var resposta = 0
+        var opcao = entradaDeDados("Escolha uma opção: 1-celsiusParaFarenheit 2-farenheitParaCelsius")
+        var temperatura = entradaDeDados("Digite uma temperatura")
+
+        if(Number(opcao) == 1){
+            resposta = celsiusParaFarenheit(Number(temperatura))
+            resultado += `${temperatura}º C = ${resposta} º F`
+        }else{
+            resposta = farenheitParaCelsius(Number(temperatura))
+            resultado += `${temperatura}º F = ${resposta} º C`
+        }
+        
+        resultado += "</p>"
+        
+        document.writeln(resultado)
+    </script>
+</body>
+</html>
