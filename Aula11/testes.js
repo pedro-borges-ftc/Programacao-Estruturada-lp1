@@ -1,3 +1,12 @@
+var a = ["casa", "carro", "moto"]
+
+console.log(a[1])
+a[3]="bicicleta"
+a[2]="motocicleta"
+console.log(a)
+
+/*
+
 a = [];				// Começa com um array vazio 
 a.push("zero")		// Adiciona um valor no final. 
 console.log(a)
@@ -17,3 +26,4 @@ for(i in cores){
 for (var i = 0; i < cores.length; i++) {
   console.log(`Índice: ${i} - Valor: ${cores[i]}`);
 }
+  */
